@@ -1,0 +1,224 @@
+{
+  "query_results": [
+    {
+      "id": "direct_001",
+      "category": "direct_lookup",
+      "query": "What is overfitting?",
+      "relevant_text": "The model is too complex and starts memorizing noise in the training data.",
+      "first_relevant_rank": 2,
+      "hit_at_1": 0.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "direct_002",
+      "category": "direct_lookup",
+      "query": "What is underfitting?",
+      "relevant_text": "The model is too simple to capture the underlying pattern",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "direct_003",
+      "category": "direct_lookup",
+      "query": "What is early stopping?",
+      "relevant_text": "stop training once validation performance stops improving",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "direct_004",
+      "category": "direct_lookup",
+      "query": "What is cross validation?",
+      "relevant_text": "test the model on multiple data splits to check consistency",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "direct_005",
+      "category": "direct_lookup",
+      "query": "How decision trees make predictions?",
+      "relevant_text": "Decision trees make predictions by asking a series of yes/no questions about the features",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "direct_006",
+      "category": "direct_lookup",
+      "query": "What is classification?",
+      "relevant_text": "Classification predicts a category instead of a number",
+      "first_relevant_rank": 3,
+      "hit_at_1": 0.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 0.3333333333333333
+    },
+    {
+      "id": "direct_007",
+      "category": "direct_lookup",
+      "query": "What is linear regression?",
+      "relevant_text": "It predicts a continuous number by fitting a straight line",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "direct_008",
+      "category": "direct_lookup",
+      "query": "What is supervised learning?",
+      "relevant_text": "The model learns from labeled data",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "direct_009",
+      "category": "direct_lookup",
+      "query": "What is unsupervised learning?",
+      "relevant_text": "The model works with unlabeled data",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "direct_010",
+      "category": "direct_lookup",
+      "query": "What is reinforcement learning",
+      "relevant_text": "An agent learns by interacting with an environment",
+      "first_relevant_rank": 2,
+      "hit_at_1": 0.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "semanctic_001",
+      "category": "semantic",
+      "query": "Why might a model perform well on training data but poorly on unseen data?",
+      "relevant_text": "The model is too complex and starts memorizing noise in the training data.",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "semanctic_002",
+      "category": "semantic",
+      "query": "What might a machine learning model fail to learn important patterns because it is not complex enough?",
+      "relevant_text": "The model is too simple to capture the underlying pattern",
+      "first_relevant_rank": 2,
+      "hit_at_1": 0.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "semanctic_003",
+      "category": "semantic",
+      "query": "How can we prevent a model from continuing to train after its performance on unseen validation data stops getting better?",
+      "relevant_text": "stop training once validation performance stops improving",
+      "first_relevant_rank": 2,
+      "hit_at_1": 0.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "semanctic_004",
+      "category": "semantic",
+      "query": "How can we evaluate whether a model performs consistently across different portions of the available data?",
+      "relevant_text": "test the model on multiple data splits to check consistency",
+      "first_relevant_rank": null,
+      "hit_at_1": 0.0,
+      "hit_at_3": 0.0,
+      "hit_at_5": 0.0,
+      "reciprocal_rank": 0.0
+    },
+    {
+      "id": "semanctic_005",
+      "category": "semantic",
+      "query": "How can a model reach a prediction by repeatedly splitting examples according to conditions on their input features?",
+      "relevant_text": "Decision trees make predictions by asking a series of yes/no questions about the features",
+      "first_relevant_rank": 5,
+      "hit_at_1": 0.0,
+      "hit_at_3": 0.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 0.2
+    },
+    {
+      "id": "semanctic_006",
+      "category": "semantic",
+      "query": "What kind of prediction task should I use when the expected output is a categorical such as spam or not spam rather than a numerical value?",
+      "relevant_text": "Classification predicts a category instead of a number",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "semanctic_007",
+      "category": "semantic",
+      "query": "Which simple machine learning method can estimate a numerical value by finding a best-fitting straight-line relationship between variables?",
+      "relevant_text": "It predicts a continuous number by fitting a straight line",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "semanctic_008",
+      "category": "semantic",
+      "query": "What learning approach can be used when every training example already includes the correct answer the model should learn to predict?",
+      "relevant_text": "The model learns from labeled data",
+      "first_relevant_rank": 1,
+      "hit_at_1": 1.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 1.0
+    },
+    {
+      "id": "semanctic_009",
+      "category": "semantic",
+      "query": "What learning approach allows a model to discover hidden structures or patterns when the training examples do not have labels?",
+      "relevant_text": "The model works with unlabeled data",
+      "first_relevant_rank": 2,
+      "hit_at_1": 0.0,
+      "hit_at_3": 1.0,
+      "hit_at_5": 1.0,
+      "reciprocal_rank": 0.5
+    },
+    {
+      "id": "semanctic_010",
+      "category": "semantic",
+      "query": "How can an AI system learn a better strategy through trial and error by receiving positive or negative feedback of its actions?",
+      "relevant_text": "An agent learns by interacting with an environment",
+      "first_relevant_rank": null,
+      "hit_at_1": 0.0,
+      "hit_at_3": 0.0,
+      "hit_at_5": 0.0,
+      "reciprocal_rank": 0.0
+    }
+  ]
+}

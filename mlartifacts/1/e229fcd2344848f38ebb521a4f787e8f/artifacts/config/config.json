@@ -1,0 +1,10 @@
+{
+  "name": "bm25-1000-200",
+  "embedding_model": null,
+  "chunking_strategy": "langchain_recursive",
+  "chunk_size": 500,
+  "chunk_overlap": 100,
+  "retriever": "dense_bruteforce",
+  "similarity": "cosine",
+  "top_k": 5
+}

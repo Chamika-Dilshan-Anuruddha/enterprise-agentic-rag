@@ -1,0 +1,10 @@
+{
+  "name": "hybrid-minilm-bm-25-1000-200",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunking_strategy": "langchain_recursive",
+  "chunk_size": 1500,
+  "chunk_overlap": 300,
+  "retriever": "dense_bruteforce",
+  "similarity": "cosine",
+  "top_k": 5
+}

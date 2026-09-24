@@ -1,0 +1,10 @@
+{
+  "name": "minilm-1000-200",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunking_strategy": "langchain_recursive",
+  "chunk_size": 1000,
+  "chunk_overlap": 200,
+  "retriever": "dense_bruteforce",
+  "similarity": "cosine",
+  "top_k": 5
+}
