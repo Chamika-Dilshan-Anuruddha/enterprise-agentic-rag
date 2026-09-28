@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 
 from rag.chunking.langchain_recursive import LangChainRecursiveChunker
 from rag.embeddings.sentence_transformer import SentenceTransformerEmbedder
+from rag.evaluation.faithfulness import FaithfullnessEvaluator
 from rag.generation.context import ContextBuilder
 from rag.generation.prompt import PromptBuilder
 from rag.ingestion.pdf import PDFLoader
@@ -64,14 +65,14 @@ def main():
     )
 
 
-    # question = "What is overfitting?"
-    question = "Who is the president of France?"
+    question = "What is overfitting?"
+    # question = "Who is the president of France?"
 
     print()
     print(f"Question:   {question}")
     print()
 
-    response = service.ask(question)
+    response = service.ask(question) 
 
     print("Answer:")
     print(response.answer)
@@ -91,6 +92,43 @@ def main():
             f"- page {metadata.get('page', 'unknown')} "
             f"- score {result.score:.4f}"
         )
+
+    evaluation_cotext = ContextBuilder().build(
+            response.sources
+        )
+    
+    faithfulness_evaluator = FaithfullnessEvaluator(
+        llm=llm
+    )
+
+    evaluation = faithfulness_evaluator.evaluate(
+        question=question,
+        answer=response.answer,
+        context=evaluation_cotext
+    )
+
+    # evaluation = faithfulness_evaluator.evaluate(
+    #     question=question,
+    #     answer=(
+    #         "Overfitting happens when a model memorizes "
+    #         "training data. The best solution is to use "
+    #         "exactly 73 precent dropout and train for 500 epochs."
+    #     ),
+    #     context=evaluation_cotext
+    # )
+
+    
+
+    print()
+    print("Generation Evaluation")
+    print("=" * 70)
+
+    print(
+        f"Faithfulness: {evaluation.score:.3f}"
+    )
+    print()
+    print("Reasoning:")
+    print(evaluation.reasoning)
 
 
 

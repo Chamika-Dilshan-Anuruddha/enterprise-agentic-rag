@@ -1,6 +1,9 @@
 from dataclasses import dataclass, field
-from typing import Any
+from typing import Any, TypeVar
 
+from pydantic import BaseModel, Field
+
+T = TypeVar("T", bound=BaseModel)
 
 @dataclass(slots=True)
 class Document:
@@ -39,3 +42,15 @@ class QueryEvaluationResult:
 class RAGResponse:
     answer: str
     sources: list[RetrievalResult]
+    context: str
+
+
+class FaithfulnessEvaluation(BaseModel):
+    score: float = Field(
+        ge=0.0,
+        le=1.0
+    )
+    reasoning: str
+
+
+

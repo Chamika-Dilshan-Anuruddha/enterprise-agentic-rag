@@ -25,7 +25,7 @@ class FakeRetriever:
             )
         ]
 
-class FaakeLLM:
+class FakeLLM:
     def generate(
             self,
             prompt: str
@@ -41,7 +41,7 @@ def test_rag_service_returns_answer_and_sources():
         retriever=FakeRetriever(),
         context_builder=ContextBuilder(),
         prompt_builder=PromptBuilder(),
-        llm=FaakeLLM(),
+        llm=FakeLLM(),
         top_k=5
     )
 
@@ -57,13 +57,15 @@ def test_rag_service_returns_answer_and_sources():
         response.sources[0].document.metadata["page"] == 7
     )
 
+    assert "Overfitting" in response.context
+
 
 def test_tag_service_rejects_empty_quesitons():
     service = RAGService(
         retriever=FakeRetriever(),
         context_builder=ContextBuilder(),
         prompt_builder=PromptBuilder(),
-        llm=FaakeLLM(),
+        llm=FakeLLM(),
         top_k=5
     )
 
@@ -83,6 +85,6 @@ def test_rag_service_rejects_invalid_top_k():
             retriever=FakeRetriever(),
             context_builder=ContextBuilder(),
             prompt_builder=PromptBuilder(),
-            llm=FaakeLLM(),
+            llm=FakeLLM(),
             top_k=0
         )

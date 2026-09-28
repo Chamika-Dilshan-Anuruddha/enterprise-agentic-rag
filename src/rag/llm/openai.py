@@ -1,5 +1,9 @@
-from openai import OpenAI
+from typing import TypeVar
 
+from openai import OpenAI
+from pydantic import BaseModel
+
+T = TypeVar("T", bound=BaseModel)
 
 class OpenAIProvider:
     """LLM provider using the OpenAI API."""
@@ -26,3 +30,27 @@ class OpenAIProvider:
         )
 
         return response.output_text
+
+
+    def generate_structured(
+            self,
+            prompt: str,
+            response_model: type[T],
+    ) -> T:
+        response = self.client.responses.parse(
+            model=self.model,
+            input=[
+                {
+                    "role": "user",
+                    "content": prompt,
+                }
+            ],
+            text_format=response_model
+        )
+
+        if response.output_parsed is None:
+            raise RuntimeError(
+                "Model did not return structured output"
+            )
+
+        return response.output_parsed

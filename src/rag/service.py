@@ -53,5 +53,6 @@ class RAGService:
 
         return RAGResponse(
             answer=answer,
-            sources=results
+            sources=results,
+            context=context
         )
